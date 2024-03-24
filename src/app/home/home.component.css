@@ -1,3 +1,9 @@
 #card-img{
        margin-left: 43px;
 }
+
+@media only screen and (max-width: 600px) {
+    #card-img{
+        margin-left: 100px;
+    }
+}

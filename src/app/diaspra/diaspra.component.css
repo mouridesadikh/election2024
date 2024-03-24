@@ -1,0 +1,13 @@
+#card-img{
+    margin-left: 50px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    #card-img{
+        margin-left: 100px;
+    }
+}
+
+
