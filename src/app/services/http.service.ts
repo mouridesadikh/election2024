@@ -5,7 +5,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HttpService {
 
-  url : string = "http://election.jafrchir.org/api";
+  url : string = "https://election.jafrchir.org/api";
+  // url : string = "http://127.0.0.1:8000/api";
 
   constructor(private httpClient : HttpClient) { }
 
