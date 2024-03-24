@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpService } from '../services/http.service';
-import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+
 
 @Component({
   selector: 'app-home',
