@@ -154,11 +154,6 @@ export class CartographieComponent {
   }
 
   ngOnInit(): void {
-      this.dtOptions = {
-        responsive : true,
-        order : undefined
-      }
-
     
     
   }
@@ -172,6 +167,8 @@ export class CartographieComponent {
 
       
       this.allResultatByCandidat = this.allResultatByCandidat.sort((a,b) => b.nb - a.nb);
+      console.log("hhdh",this.allResultatByCandidat);
+      
      
       this.nomTotalDevotePArRegion = rs.nbrVotant;    
 
@@ -197,7 +194,7 @@ export class CartographieComponent {
    
        
         this.allResultatByCandidat = JSON.parse(rs);
-        console.log("ddddd",this.allResultatByCandidat);
+        
         
         this.allResultatByCandidat = this.allResultatByCandidat.sort((a,b) => b.nb - a.nb );
         
@@ -207,23 +204,14 @@ export class CartographieComponent {
        
   }
   ngAfterViewInit() {
-    this.httpService.getDataFromDiagram().pipe(
-      map((rs: any) => {
-        return rs;
-      })
-      ).subscribe((processedData: any) => {
+       this.changeColor();
+  }
+
+  changeColor(){
+    this.httpService.getDataFromDiagram().subscribe((processedData: any) => {
           let recupdata : any =  this.getMaxPercentages(processedData);
         
-          if(recupdata['KAOLACK']){
-            this.candidats.forEach(rs=>{
-                 if(recupdata['KAOLACK']['candidat'] == rs['title']){
-                   let kaolackPathRef = this.kaolackPathRef.nativeElement;
-                   kaolackPathRef.setAttribute('class', rs['name']);
-                 }
-            })
-
-       }
-          
+           
           if(recupdata['FATICK']){
                this.candidats.forEach(rs=>{
                     if(recupdata['FATICK']['candidat'] == rs['title']){
@@ -233,6 +221,22 @@ export class CartographieComponent {
                })
 
           }
+
+          if(recupdata['KAOLACK']){
+            this.candidats.forEach(rs=>{
+             
+                 if(recupdata['KAOLACK']['candidat'] == rs['title']){
+                  
+                   let kaolackPathRef = this.kaolackPathRef.nativeElement;
+                   console.log("kaolack",kaolackPathRef);
+                   kaolackPathRef.setAttribute('class', rs['name']);
+                   
+                    
+                 }
+            })
+
+           }
+           
           if(recupdata['KEDOUGOU']){
             this.candidats.forEach(rs=>{
                  if(recupdata['KEDOUGOU']['candidat'] == rs['title']){
@@ -345,12 +349,6 @@ export class CartographieComponent {
         
            
       });
-     
- 
-    
-    console.log("cheikh", this.allRegionWithResult);
-    
-
   }
 
 
