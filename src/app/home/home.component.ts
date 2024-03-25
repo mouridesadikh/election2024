@@ -76,10 +76,10 @@ export class HomeComponent {
         
          
         this.allResultatsByCandidats = rs.rtsParCandidats;
-        console.log(this.allResultatsByCandidats);
+
         
         this.allResultatsByCandidats = this.allResultatsByCandidats.sort((a,b) => b.nb - a.nb);
-        console.log(this.allResultatsByCandidats);
+       
         this.nbrVotant = rs.nbrVotant;    
 
          });

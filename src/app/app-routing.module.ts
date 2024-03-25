@@ -7,8 +7,8 @@ import { EvolutionComponent } from './evolution/evolution.component';
 
 const routes: Routes = [
     {path : '', redirectTo: '/home', pathMatch:'full'},
-    {path : 'home', component: HomeComponent},
-    {path : 'cartographie', component : CartographieComponent},
+    {path : 'cartographie', component: HomeComponent},
+    {path : 'home', component : CartographieComponent},
     {path : 'diaspora', component : DiaspraComponent},
     {path : 'evolution', component : EvolutionComponent}
 ];

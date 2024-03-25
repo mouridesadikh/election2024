@@ -2,7 +2,7 @@
     <div class="col-12">
 
         <div class="row">
-            <div class="col-md-2 col-12" *ngFor="let data of allResultatByCandidat">
+            <div class="col-md-3 col-12" *ngFor="let data of allResultatByCandidat">
                 <div class="card" [style.border]="this.getRandomColor()">
 
                     <div class="card-header">
@@ -10,7 +10,7 @@
                     </div>
                     <div class="card-body" style="font-size: small;line-height: 10px;">
                         <p> Total à voter: {{ data.totalAvoter }} </p>
-                        <p>Pourcentage des votes: {{ data.pourcentages }} %</p>
+                        <p>Taux de Participation: {{ data.pourcentages }} %</p>
                     </div>
                 </div>
                 &nbsp;&nbsp;

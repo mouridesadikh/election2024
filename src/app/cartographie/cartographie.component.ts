@@ -32,8 +32,10 @@ export class CartographieComponent {
   totalCom : number = 0;
   dtOptions: DataTables.Settings = {};
   nomTotalDevotePArRegion : number = 0;
+  nbrVotant: number = 0;
   constructor(private httpService : HttpService){
     this.fetchRegion();
+    this.getRecup();
   }
 
   ngOnInit(): void {
@@ -43,6 +45,23 @@ export class CartographieComponent {
       }
     
   }
+
+  getRecup(){
+   
+    this.httpService.getResultat().subscribe((rs:any)=>{
+      
+      this.nomRegion = "National";
+      this.allResultatByCandidat = rs.rtsParCandidats;
+
+      
+      this.allResultatByCandidat = this.allResultatByCandidat.sort((a,b) => b.nb - a.nb);
+     
+      this.nomTotalDevotePArRegion = rs.nbrVotant;    
+
+       });
+  
+}
+
 
   getInfos(data:any){
    
@@ -61,9 +80,10 @@ export class CartographieComponent {
    
        
         this.allResultatByCandidat = JSON.parse(rs);
-        console.log(this.allResultatByCandidat);
+        console.log("ddddd",this.allResultatByCandidat);
+        
         this.allResultatByCandidat = this.allResultatByCandidat.sort((a,b) => b.nb - a.nb );
-        console.log(this.allResultatByCandidat);
+        
         
      
        })
@@ -132,6 +152,8 @@ export class CartographieComponent {
       this.totalDep = 0;
       this.allResultatByCandidatCom = [];
       this.allResultatByCandidatDep = [];
+      console.log(data);
+      
       this.httpService.getResultatByRegionIdAndCandidatId(data.regionId,data.candidatId).subscribe((rs:any)=>{
                   this.allResultatByCandidatCom = rs.com;
                   this.allResultatByCandidatDep = rs.dep;
