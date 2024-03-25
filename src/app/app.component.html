@@ -1,25 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #242c6d !important;width: 110%;" >
 
-    <div class="container collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/" style="color: white !important;">RESULTATS NATIONAL <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/diaspora" style="color: white !important;">RESULTATS DIASPORA <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/evolution" style="color: white !important;">EVOLUTION DES VOTES <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/cartographie" style="color: white !important;">CARTOGRAPHIE</a>
-            </li>
-
-
-        </ul>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #242c6d !important;width: 110%;">
+    <div class="container-fluid">
+        <a routerLink="/" class="navbar-brand" style="color: white !important;font-family: cursive;">  Election 2024 </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a routerLink="/" class="nav-item nav-link active"  style="color: white !important;">RESULTATS NATIONAL</a>
+                <a routerLink="/diaspora" class="nav-item nav-link"  style="color: white !important;">RESULTATS DIASPORA </a>
+                <a routerLink="/evolution" class="nav-item nav-link"  style="color: white !important;">EVOLUTION DES VOTES</a>
+                <a routerLink="/cartographie" class="nav-item nav-link"  style="color: white !important;">CARTOGRAPHIE</a>
+            </div>
+           
+        </div>
     </div>
 </nav>
+
+
 <div class="col-12">
     <img src="../assets/header banner.png" alt="" srcset=""  width="110%" >
     <img src="../assets/rp.png" alt=""  width="110%">
