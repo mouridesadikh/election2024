@@ -33,5 +33,9 @@ export class HttpService {
     return this.httpClient.get(this.url+"/resultatsParCandidats/"+idcandidat+"/"+id)
   }
 
+  getDataFromDiagram(){
+    
+    return this.httpClient.get(this.url+"/rts/groupby/candidat/and/region")
+  }
 
 }

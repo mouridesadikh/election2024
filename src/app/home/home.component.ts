@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 import { HttpService } from '../services/http.service';
-
+import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-home',
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, CanvasJSAngularChartsModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -11,58 +16,89 @@ export class HomeComponent {
   allResultatsByCandidats : any [] = [];
   nbrVotant : number = 0;
 
-  data : any [] = [
-  {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
-
+  
+  chartOptions : any;
+ 
   constructor(private httpService : HttpService){
-   
-      
+      this.getData();
+     
       this.getRecup();
+      
       // setInterval(()=>{
       //     this.getRecup();
       // },1000);
+  }
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+     this.getData();
+  }
+
+  getData()
+  {
+    this.httpService.getDataFromDiagram().pipe(
+        map((rs: any) => {
+          console.log("eeeeeee",rs);
+          
+           let data = {
+              animationEnabled: true,
+              exportEnabled: true,
+      
+              title:{
+                text: ""   
+              },
+              axisX:{
+                title: "Région"
+              },
+              axisY:{
+                title: "Pourcentage"
+              },
+              toolTip:  {
+                shared: true
+              },
+              legend: {
+                horizontalAlign: "top",
+                verticalAlign: "center",
+                reversed: true        
+              },
+              data: this.formatData(rs)
+            };
+            console.log("resultat",data);
+            
+            return data;
+        })
+    ).subscribe((processedData: any) => {
+        this.chartOptions = processedData;
+    });
+   
+
+     console.log("ddddd",this.chartOptions);
+  }
+
+
+  formatData(jsonData: any): any[] {
+   
+   
+    const formattedData = [];
+    // Boucle sur les données JSON
+    for (const entry of jsonData) {
+      
+      let axData = [];
+      for (const entr of entry.regions) {
+        axData.push({ y: parseInt(entr.percentage), label: entr.region })
+      }
+      
+      const formattedEntry = {
+        type: 'stackedColumn100',
+        name: entry.candidat,
+      
+        indexLabelFontColor: 'white',
+        dataPoints: axData
+      };
+      formattedData.push(formattedEntry);
+    }
+    return formattedData;
   }
   getRandomColor() {
     var color = Math.floor(0x1000000 * Math.random()).toString(16);

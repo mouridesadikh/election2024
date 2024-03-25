@@ -9,10 +9,11 @@ import { HttpClientModule} from '@angular/common/http';
 import { DiaspraComponent } from './diaspra/diaspra.component';
 import { EvolutionComponent } from './evolution/evolution.component';
 import { DataTablesModule } from "angular-datatables";
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+
     CartographieComponent,
     DiaspraComponent,
     EvolutionComponent
@@ -21,7 +22,9 @@ import { DataTablesModule } from "angular-datatables";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    DataTablesModule
+    DataTablesModule,
+    CanvasJSAngularChartsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
