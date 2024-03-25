@@ -1,8 +1,10 @@
-<div class="container">
+<br>
+<div class="container mt-10">
     <div class="row">
         
         <div class="col-12">
             <div class="row">
+                
                 <div class="col-md-3" *ngFor="let allResultatsByCandidat of allResultatsByCandidats">
                    
 
@@ -13,13 +15,10 @@
                                 <img  src="https://election.jafrchir.org/photo/{{ allResultatsByCandidat.photo }}" alt="Card image cap" style="height: 100px;width: 100px;"> 
                             </div>
                             <div class="col-12">
-
-                                <p style="font-weight: 700;font-size: small;text-align: center ;margin-right: 5px;">{{ allResultatsByCandidat.nom }}</p>
-
-
-                                <h4>
-                                    <p class="card-text text-center text-danger">{{((allResultatsByCandidat.nb/nbrVotant)*100).toFixed(2)}}%</p>
-                                </h4>
+                                
+                                <p style="font-weight: 700;font-size: small;text-align: center ;" class="text-lg">{{ allResultatsByCandidat.nom }}</p>
+                                <p style="font-weight: 700;font-size: large;text-align: center ;" >{{ allResultatsByCandidat.nb }} Voix</p>
+                                <p class="card-text text-center text-bold text-danger mb-3" style="font-weight: 800;">{{((allResultatsByCandidat.nb/nbrVotant)*100).toFixed(2)}}%</p>
                             </div>
                         </div>
                        

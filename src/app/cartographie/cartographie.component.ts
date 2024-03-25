@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { HttpService } from '../services/http.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { HttpService } from '../services/http.service';
   styleUrls: ['./cartographie.component.css']
 })
 export class CartographieComponent {
+  
   allRegionWithResult  : any [] = [];
   louga  : any ;
   dakar  : any ;
@@ -33,6 +34,8 @@ export class CartographieComponent {
   dtOptions: DataTables.Settings = {};
   nomTotalDevotePArRegion : number = 0;
   nbrVotant: number = 0;
+  maClasse: string = 'land';
+  @ViewChild('idDakar') monPathRef!: ElementRef;
   constructor(private httpService : HttpService){
     this.fetchRegion();
     this.getRecup();
@@ -43,6 +46,8 @@ export class CartographieComponent {
         responsive : true,
         order : undefined
       }
+
+    
     
   }
 
@@ -89,7 +94,12 @@ export class CartographieComponent {
        })
        
   }
-
+  ngAfterViewInit() {
+    let monPath = this.monPathRef.nativeElement;
+    console.log("cheikh",monPath);
+    
+    monPath.setAttribute('class', 'check');
+  }
 
   fetchRegion(){
     this.httpService.getResultatRegion().subscribe((rs:any)=>{
@@ -140,7 +150,11 @@ export class CartographieComponent {
           this.ziguinchor = element;
          }
       });
-  });
+      
+     
+    
+     });
+
   }
   getRandomColor() {
     var color = Math.floor(0x1000000 * Math.random()).toString(16);
