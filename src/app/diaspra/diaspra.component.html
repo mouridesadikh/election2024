@@ -1,3 +1,4 @@
+<br>
 <div class="container">
     <div class="row">
         
@@ -14,12 +15,11 @@
                             </div>
                             <div class="col-12">
 
-                                <p style="font-weight: 700;font-size: small;text-align: center ;margin-right: 5px;">{{ allResultatsByCandidat.nom }}</p>
-                              
-                                <p style="font-weight: 700;font-size: small;text-align: center ;margin-right: 5px;">{{allResultatsByCandidat.nb }}</p>
-                                <h4>
-                                    <p class="card-text text-center text-danger">{{((allResultatsByCandidat.nb/nbrVotant)*100).toFixed(2)}}%</p>
-                                </h4>
+                                
+                                <p style="font-weight: 700;font-size: small;text-align: center ;" class="text-lg">{{ allResultatsByCandidat.nom }}</p>
+                                <p style="font-weight: 700;font-size: large;text-align: center ;" >{{ allResultatsByCandidat.nb }} Voix</p>
+                                <p class="card-text text-center text-bold text-danger mb-3" style="font-weight: 800;">{{((allResultatsByCandidat.nb/nbrVotant)*100).toFixed(2)}}%</p>
+                  
                             </div>
                         </div>
                        

@@ -167,7 +167,7 @@ export class CartographieComponent {
 
       
       this.allResultatByCandidat = this.allResultatByCandidat.sort((a,b) => b.nb - a.nb);
-      console.log("hhdh",this.allResultatByCandidat);
+     
       
      
       this.nomTotalDevotePArRegion = rs.nbrVotant;    
@@ -228,7 +228,7 @@ export class CartographieComponent {
                  if(recupdata['KAOLACK']['candidat'] == rs['title']){
                   
                    let kaolackPathRef = this.kaolackPathRef.nativeElement;
-                   console.log("kaolack",kaolackPathRef);
+                  
                    kaolackPathRef.setAttribute('class', rs['name']);
                    
                     
@@ -424,7 +424,7 @@ export class CartographieComponent {
   }
   getRandomColor() {
     var color = Math.floor(0x1000000 * Math.random()).toString(16);
-    return '1px solid #' + ('000000' + color).slice(-6);
+    return '3px solid #' + ('000000' + color).slice(-6);
   }
 
   showInfos(data:any){

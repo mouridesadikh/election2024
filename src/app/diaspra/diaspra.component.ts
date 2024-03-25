@@ -13,12 +13,12 @@ export class DiaspraComponent {
    
     setInterval(()=>{
       this.getRecup();
-  },1000);
+  },20000);
    
   }
   getRandomColor() {
     var color = Math.floor(0x1000000 * Math.random()).toString(16);
-    return '1px solid #' + ('000000' + color).slice(-6);
+    return '3px solid #' + ('000000' + color).slice(-6);
   }
 
   getRecup(){

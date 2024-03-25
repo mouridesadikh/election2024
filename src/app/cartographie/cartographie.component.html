@@ -103,7 +103,29 @@
                    
                 </div>
                 <div class="col-md-7 col-12" *ngIf="nomRegion != '' ">
+                    <div class="row" *ngIf="allResultatByCandidat">
+                        <div class="col-md-6" *ngFor="let dataCandidat of allResultatByCandidat" >
+                            <div class="card" [style.border]="this.getRandomColor()" (click)="showInfos(dataCandidat)">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img class="rounded-circle" src="https://election.jafrchir.org/photo/{{ dataCandidat.photo }}" alt="Card image cap" style="height: 100px;width: 100px;">
+                                    </div>
+                                    <div class="col-10">
 
+                                        <p style="font-weight: 600;font-size: small;text-align: right;margin-right: 5px;">{{ dataCandidat.nomcandidat }}</p>
+
+                                        <p style="font-weight: 600;font-size: small;text-align: center;" class="text-success">Vote Obtenu : {{ dataCandidat.nb }}</p>
+                                        <h4>
+                                            <p class="card-text text-center text-danger">{{((dataCandidat.nb/nomTotalDevotePArRegion)*100).toFixed(2)}}%</p>
+                                        </h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                            &nbsp;&nbsp;
+                        </div>
+                        &nbsp;&nbsp;
+                    </div>
                     <div class="card">
                         <div class="card-header" style="font-weight: 900;">
                             {{ nomRegion }}
