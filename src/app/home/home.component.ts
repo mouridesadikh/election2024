@@ -86,7 +86,7 @@ export class HomeComponent {
       
       let axData = [];
       for (const entr of entry.regions) {
-        axData.push({ y: parseInt(entr.percentage), label: entr.region })
+        axData.push({ y: entr.percentage, label: entr.region })
       }
       
       const formattedEntry = {
