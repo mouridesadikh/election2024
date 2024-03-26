@@ -10,7 +10,6 @@
     transition: fill 0.3s;
 }
 
-
 .map__image path:hover {
     fill: #088792;
     stroke: #FFF;
@@ -21,17 +20,22 @@
 @media only screen and (max-width: 600px) {
     .map__image {
         width: 100%;
-        margin-top: -50px;
+        margin-top: 30px;
+        svg {
+            margin-top: -140px;
+        }
     }
 }
 
 @media only screen and (min-width: 1000px) {
     .map__image {
-
-        margin-top: 30px;
+        width: 100%;
+        margin-top: 0px;
+        svg {
+            margin-top: -140px;
+        }
     }
 }
-
 
 .spinner {
     display: block;
@@ -43,118 +47,130 @@
 }
 
 
-
-
 /* /**  color ***** */
 
-.bassirou{
+.bassirou {
     fill: #0083a4 !important;
     stroke: #FFF;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.aliou{
+
+.aliou {
     fill: #06650c !important;
     stroke: #FFF;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.aly{
+
+.aly {
     fill: #5d7f4e !important;
     stroke: #FFF;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.amadou{
+
+.amadou {
     fill: #7a4d30 !important;
     stroke: #FFF;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.anta{
+
+.anta {
     fill: #2a8c3e !important;
     stroke: #FFF;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
 
-.boubacar{
+.boubacar {
     fill: #cd221c !important;
     stroke: #FFF;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
 
-.cheikh{
+.cheikh {
     fill: #1b1a53 !important;
     stroke: #FFF;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.daouda{
+
+.daouda {
     fill: #0a66b2 !important;
     stroke: #FFF;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.dethie{
+
+.dethie {
     fill: #f4b822 !important;
     stroke: #FFF;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.malick{
+
+.malick {
     fill: #e00314 !important;
     stroke: #FFF;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.mamadou{
+
+.mamadou {
     fill: #7030a0 !important;
     stroke: #FFF;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.habib{
+
+.habib {
     fill: #0083a4 !important;
     stroke: #FFF;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.idrissa{
+
+.idrissa {
     fill: #0083a4 !important;
     stroke: #690007;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.khalifa{
+
+.khalifa {
     fill: #0083a4 !important;
     stroke: #06603d;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.abdallah{
+
+.abdallah {
     fill: #0083a4 !important;
     stroke: #0c8e36;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.lamine{
+
+.lamine {
     fill: #0083a4 !important;
     stroke: #f9e933;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.serigne{
+
+.serigne {
     fill: #0083a4 !important;
     stroke: #0083a4;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-.alassane{
+
+.alassane {
     fill: #0083a4 !important;
     stroke: #37abe2;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
-

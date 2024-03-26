@@ -2,9 +2,9 @@
 
     <div class="row">
         <div class="col-12">
-           <br><br>
-            <div  *ngIf="allRegionWithResult.length == 0">
-                     
+            <br><br>
+            <div *ngIf="allRegionWithResult.length == 0">
+
                 <div class="spinner spinner-border text-info" role="status" style="margin-left:auto;margin-top: 10px;">
                     <span class="sr-only"></span>
                 </div>
@@ -13,10 +13,12 @@
         </div>
         <div class="col-12">
             <div class="row">
-                
+
                 <div class="col-md-5 col-12">
 
-                    <div class="map__image" >
+                    <div class="map__image" style="border: 1px red solid;">
+                        <br>
+                        <p style="font-family: cursive;text-align: center;font-weight: bold;"> {{ nomRegion }} </p>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 620 985">
                                  
                                 <g >
@@ -99,18 +101,18 @@
                                
                             </svg>
                     </div>
-                    
-                   
+
+
                 </div>
                 <div class="col-md-7 col-12" *ngIf="nomRegion != '' ">
-                   
+
                     <div class="card">
                         <div class="card-header" style="font-weight: 900;">
-                            {{ nomRegion }}
+                            <p style="font-family: cursive;text-align: center;font-weight: bold;"> {{ nomRegion }} </p>
                         </div>
                         <div class="card-body">
                             <div class="row" *ngIf="allResultatByCandidat">
-                                <div class="col-md-6" *ngFor="let dataCandidat of allResultatByCandidat" >
+                                <div class="col-md-6" *ngFor="let dataCandidat of allResultatByCandidat">
                                     <div class="card" [style.border]="this.getRandomColor()" (click)="showInfos(dataCandidat)">
                                         <div class="row">
                                             <div class="col-2">
@@ -140,13 +142,13 @@
 
                 </div>
 
-                <div class="col-md-6 col-12 mt-5" *ngIf="allResultatByCandidatDep.length != 0" >
+                <div class="col-md-6 col-12 mt-5" *ngIf="allResultatByCandidatDep.length != 0">
                     <div class="card">
                         <div class="card-header">
-                         <p style="font-weight: 900;">Nombre de voix obtenues : {{ totalDep }}</p>
+                            <p style="font-weight: 900;">Nombre de voix obtenues : {{ totalDep }}</p>
                         </div>
                         <div class="card-body">
-                            <table datatable [dtOptions]="dtOptions" id="example"  class="display" style="width:100%">
+                            <table datatable [dtOptions]="dtOptions" id="example" class="display" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th>Region</th>
@@ -155,26 +157,26 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                             
+
                                     <tr *ngFor="let resultat of allResultatByCandidatDep">
                                         <td>{{ nomRegion}}</td>
                                         <td>{{ resultat.departement }}</td>
                                         <td>{{ resultat.nb }}</td>
                                     </tr>
-                                    
-    
+
+
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-12 mt-5" *ngIf="allResultatByCandidatCom.length != 0" >
+                <div class="col-md-6 col-12 mt-5" *ngIf="allResultatByCandidatCom.length != 0">
                     <div class="card">
                         <div class="card-header">
-                         <p style="font-weight: 900;">Nombre de voix obtenues : {{ totalCom }} </p>
+                            <p style="font-weight: 900;">Nombre de voix obtenues : {{ totalCom }} </p>
                         </div>
                         <div class="card-body">
-                            <table datatable id="example"  class="display" style="width:100%">
+                            <table datatable id="example" class="display" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th>Region</th>
@@ -184,15 +186,15 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                             
+
                                     <tr *ngFor="let resultat of allResultatByCandidatCom">
                                         <td>{{ nomRegion}}</td>
                                         <td>{{ resultat.departement }}</td>
                                         <td>{{ resultat.commune }}</td>
                                         <td>{{ resultat.nb }}</td>
                                     </tr>
-                                    
-    
+
+
                                 </tbody>
                             </table>
                         </div>
