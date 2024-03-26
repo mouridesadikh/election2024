@@ -40,12 +40,25 @@
 @media only screen and (min-width: 1300px) {
     .map__image {
         width: 100%;
-        margin-top: -124px;
+        margin-top: -180px;
         svg {
             margin-top: -140px;
         }
         .title-region {
             margin-top: 100px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .map__image {
+        width: 100%;
+        margin-top: -190px;
+        svg {
+            margin-top: -260px;
+        }
+        .title-region {
+            margin-top: 160px;
         }
     }
 }
