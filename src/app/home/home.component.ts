@@ -73,7 +73,9 @@ export class HomeComponent {
     });
    
 
-     console.log("ddddd",this.chartOptions);
+    console.log('====================================');
+    console.log(this.chartOptions);
+    console.log('====================================');
   }
 
 

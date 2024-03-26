@@ -10,20 +10,21 @@ import { DiaspraComponent } from './diaspra/diaspra.component';
 import { EvolutionComponent } from './evolution/evolution.component';
 import { DataTablesModule } from "angular-datatables";
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { CandidatComponent } from './candidat/candidat.component';
 @NgModule({
   declarations: [
     AppComponent,
-
-    CartographieComponent,
     DiaspraComponent,
-    EvolutionComponent
+    EvolutionComponent,
+    CandidatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     DataTablesModule,
-    CanvasJSAngularChartsModule
+    CanvasJSAngularChartsModule,
+    
     
   ],
   providers: [],
