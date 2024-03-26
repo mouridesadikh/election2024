@@ -1,1 +1,26 @@
-<p>candidat works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <div class="col" *ngFor="let candidat ofallCandidats" (click)="getInformationByCandidat(candidat)">
+                {{ candidat.photo }}
+                <img src="https://election.jafrchir.org/photo/{{ candidat.photo }}" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <div class="col-12 h-25">
+        <div class="container-fluid bg-white p-4 shadow-lg rounded-lg d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-4">
+                <img alt="Candidate 1" class="img-fluid" src="/img/BDF.png" style="" />
+            </div>
+            <div class="d-grid gap-4 p-4 bg-purple-200 rounded-lg">
+                <div class="bg-primary text-white py-2 px-4 rounded-pill">Bassirou Diomaye FAYE</div>
+                <p>
+                    Coalition
+                </p>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <img alt="Candidate 1" class="img-fluid" src="/img/logodk.png" />
+            </div>
+        </div>
+    </div>
+</div>

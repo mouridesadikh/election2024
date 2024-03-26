@@ -10,6 +10,7 @@ export class DiaspraComponent {
   allResultatsByCandidats : any [] = [];
   nbrVotant : number = 0;
   constructor(private httpService : HttpService){
+    this.getRecup();
    
     setInterval(()=>{
       this.getRecup();

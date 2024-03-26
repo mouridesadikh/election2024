@@ -1,0 +1,13 @@
+.selectpicker {
+    width: 200px;
+}
+
+.custom-option {
+    padding-left: 30px;
+}
+
+.custom-option img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
