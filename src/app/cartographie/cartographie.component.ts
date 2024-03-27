@@ -1,6 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { HttpService } from '../services/http.service';
-import { map } from 'rxjs';
 import { RouterOutlet } from '@angular/router';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { CommonModule } from '@angular/common';
@@ -169,7 +168,7 @@ export class CartographieComponent {
   getDashBoard(){
      this.httpService.getDashboard().subscribe((rs:any) =>{
          this.dashboardData = rs;
-         console.log("dashboard",rs);
+         
          
      })
   }
@@ -444,22 +443,7 @@ export class CartographieComponent {
     return '3px solid #' + ('000000' + color).slice(-6);
   }
 
-  // showInfos(data:any){
-  //     this.totalCom = 0;
-  //     this.totalDep = 0;
-  //     this.allResultatByCandidatCom = [];
-  //     this.allResultatByCandidatDep = [];
-    
-      
-  //     this.httpService.getResultatByRegionIdAndCandidatId(data.regionId).subscribe((rs:any)=>{
-  //                 this.allResultatByCandidatCom = rs.com;
-  //                 this.allResultatByCandidatDep = rs.dep;
-  //                 this.allResultatByCandidatCom.forEach((x)=>{this.totalCom = this.totalCom + parseInt(x.nb)});
-  //                 this.allResultatByCandidatDep.forEach((x)=>{this.totalDep = this.totalDep + parseInt(x.nb)});
-
-                   
-  //     });
-  // }
+  
 
 
 
