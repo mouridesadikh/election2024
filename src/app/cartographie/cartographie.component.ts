@@ -154,14 +154,14 @@ export class CartographieComponent {
 ];
 
   constructor(private httpService : HttpService){
-    this.getData();
+
     this.fetchRegion();
     this.getRecup();
     
   }
 
   ngOnInit(): void {
-    this.getData();
+   
     this.getDashBoard();
     
   }
@@ -463,74 +463,6 @@ export class CartographieComponent {
 
 
 
-  getData()
-  {
-    this.httpService.getDataFromDiagram().pipe(
-        map((rs: any) => {
-         
-          
-           let data = {
-              animationEnabled: true,
-              exportEnabled: true,
-      
-              title:{
-                text: ""   
-              },
-              axisX:{
-                title: "Régions"
-              },
-              axisY:{
-                title: "Pourcentage"
-              },
-              toolTip:  {
-                shared: true
-              },
-              legend: {
-                horizontalAlign: "top",
-                verticalAlign: "center",
-                reversed: true        
-              },
-              data: this.formatData(rs)
-            };
-           
-          
-            
-            return data;
-        })
-    ).subscribe((processedData: any) => {
-        this.chartOption = processedData;
-      
-    });
-    console.log('====================================');
-    console.log(this.chartOption);
-    console.log('====================================');
 
- 
-  }
-
-
-  formatData(jsonData: any): any[] {
-   
-   
-    const formattedData = [];
-    // Boucle sur les données JSON
-    for (const entry of jsonData) {
-      
-      let axData = [];
-      for (const entr of entry.regions) {
-        axData.push({ y: entr.percentage, label: entr.region })
-      }
-      
-      const formattedEntry = {
-        type: 'stackedColumn100',
-        name: entry.candidat,
-      
-        indexLabelFontColor: 'white',
-        dataPoints: axData
-      };
-      formattedData.push(formattedEntry);
-    }
-    return formattedData;
-  }
   
 }
