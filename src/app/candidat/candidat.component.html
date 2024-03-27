@@ -41,6 +41,428 @@
             <div class="col-12">
                 <canvasjs-chart [options]="chartOptions" [styles]="{width: '100%', height:'360px'}"></canvasjs-chart>
             </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['DAKAR']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['DAKAR']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['DIOURBEL']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['DIOURBEL']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['FATICK']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['FATICK']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['KAFFRINE']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['KAFFRINE']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['KAOLACK']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['KAOLACK']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['KEDOUGOU']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['KEDOUGOU']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['KOLDA']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['KOLDA']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['LOUGA']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['LOUGA']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['MATAM']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['MATAM']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['SAINT LOUIS']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['SAINT LOUIS']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['SEDHIOU']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['SEDHIOU']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['TAMBACOUNDA']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['TAMBACOUNDA']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['THIES']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['THIES']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 mt-5"*ngIf="!isObjectEmpty(allDataByRgion)" >
+                <div class="card">
+    
+                    <div class="card-body">
+                        <table datatable id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Région</th>
+                                    <th>Département</th>
+                                    <th>Voix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr  *ngFor="let item of allDataByRgion['ZIGUINCHOR']">
+                                         <td>{{ item.region }}</td>
+                                         <td>{{ item.departement }}</td>
+                                         <td>{{ item.nb }}</td>
+                                </tr>
+                                <tr>
+                                     <td><b>Total</b></td>
+                                     <td colspan="2"><b>{{ getTotalRegion(allDataByRgion['ZIGUINCHOR']) }}</b></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </div>

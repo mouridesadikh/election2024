@@ -42,6 +42,10 @@
             margin-top: -200px;
         }
     }
+    .title-region {
+        margin-top: 5px;
+        border: 1px solid rgb(35, 10, 177);
+    }
 }
 
 @media only screen and (min-width: 1300px) {
@@ -55,18 +59,29 @@
             margin-top: 100px;
         }
     }
+    .title-region {
+      
+        border: 1px solid rgb(35, 10, 177);
+    }
 }
 
 @media only screen and (min-width: 1500px) {
     .map__image {
         width: 100%;
-        margin-top: -190px;
+        margin-top: -110px;
         svg {
             margin-top: -260px;
         }
         .title-region {
             margin-top: 150px;
         }
+    }
+    .title-region {
+        margin-top: 2px;
+        border: 1px solid rgb(35, 10, 177);
+    }
+    .card-candidat{
+        margin-top: -170px;;
     }
 }
 

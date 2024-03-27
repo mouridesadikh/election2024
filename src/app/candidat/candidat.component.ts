@@ -16,7 +16,9 @@ export class CandidatComponent {
   candidatSlected : any = {};
   chartOptions : any;
   dataChart :any [] = [];
+  allResultatByCandidatDep : any [] = [];
   isLoading : number = 0;
+  allDataByRgion : any = {};
   constructor(private httpService : HttpService){
     this.getCandidat();
     
@@ -78,12 +80,64 @@ export class CandidatComponent {
               dataPoints: mydata
             }]
           };
-          this.isLoading = 0;
 
-          console.log('====================================');
-          console.log("gg",this.chartOptions);
-          console.log('====================================');
+        
+        this.getInfoDepartement(this.candidatSlected.id)
     })
    
+  }
+
+
+  groupDataByRegion(data:any) {
+   let  groupedData : any = {}
+    data.forEach((item :any)=> {
+      if (!groupedData[item.region]) {
+        groupedData[item.region] = [];
+      }
+      groupedData[item.region].push(item);
+    });
+    
+    
+    this.allDataByRgion =  groupedData;
+  }
+
+
+  getTotalRegion(data:any){
+    let total : number = 0;
+    data.forEach((item :any)=> {
+      total = total + parseInt(item["nb"]);
+    });
+    return total;
+  }
+ 
+  // calculateRegionTotals(dataRecup:any) {
+   
+  //  let  regionTotals: { [region: string]: number } = {};
+  //  console.log('====================================');
+  //  console.log("test",dataRecup);
+  //  console.log('====================================');
+  //   const data = JSON.parse(dataRecup);
+  //   for (const entry of data.departement) {
+  //     if (regionTotals.hasOwnProperty(entry.region)) {
+  //       regionTotals[entry.region] += parseInt(entry.nb, 10);
+  //     } else {
+  //       regionTotals[entry.region] = parseInt(entry.nb, 10);
+  //     }
+  //   }
+  //   console.log('====================================');
+  //   console.log("test",regionTotals);
+  //   console.log('====================================');
+  //   this.isLoading = 0;
+  // }
+
+  getInfoDepartement(id:number){
+    this.httpService.getResultatByRegionIdAndCandidatId(id).subscribe((rs:any)=>{
+      this.allResultatByCandidatDep = rs.dep;
+      
+     
+      this.groupDataByRegion(this.allResultatByCandidatDep)
+      
+       
+     });
   }
 }

@@ -111,7 +111,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-12 col-12" *ngIf="nomRegion != '' ">
+                <div class="col-md-12 col-12 card-candidat" *ngIf="nomRegion != '' " >
 
                     <div class="card" style="margin-top: 15px;">
                         <div class="card-header" style="font-weight: 900;">
@@ -120,7 +120,7 @@
                         <div class="card-body">
                             <div class="row" *ngIf="allResultatByCandidat">
                                 <div class="col-md-4 col-12" *ngFor="let dataCandidat of allResultatByCandidat">
-                                    <div class="card" [style.border]="this.getRandomColor()" (click)="showInfos(dataCandidat)">
+                                    <div class="card" [style.border]="this.getRandomColor()" >
                                         <div class="row">
                                             <div class="col-2">
                                                 <img class="rounded-circle" src="https://election.jafrchir.org/photo/{{ dataCandidat.photo }}" alt="Card image cap" style="height: 100px;width: 100px;">
@@ -149,35 +149,7 @@
 
                 </div>
 
-                <div class="col-md-12 col-12 mt-5" *ngIf="allResultatByCandidatDep.length != 0">
-                    <div class="card">
-                        <div class="card-header">
-                            <p style="font-weight: 900;">Nombre de voix obtenues : {{ totalDep }}</p>
-                        </div>
-                        <div class="card-body">
-                            <table datatable id="example" class="display" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th>Région</th>
-                                        <th>Département</th>
-                                        <th>Voix</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    <tr *ngFor="let resultat of allResultatByCandidatDep">
-                                        <td>{{ nomRegion}}</td>
-                                        <td>{{ resultat.departement }}</td>
-                                        <td>{{ resultat.nb }}</td>
-                                    </tr>
-
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
+             
             </div>
         </div>
     </div>

@@ -434,22 +434,22 @@ export class CartographieComponent {
     return '3px solid #' + ('000000' + color).slice(-6);
   }
 
-  showInfos(data:any){
-      this.totalCom = 0;
-      this.totalDep = 0;
-      this.allResultatByCandidatCom = [];
-      this.allResultatByCandidatDep = [];
+  // showInfos(data:any){
+  //     this.totalCom = 0;
+  //     this.totalDep = 0;
+  //     this.allResultatByCandidatCom = [];
+  //     this.allResultatByCandidatDep = [];
     
       
-      this.httpService.getResultatByRegionIdAndCandidatId(data.regionId,data.candidatId).subscribe((rs:any)=>{
-                  this.allResultatByCandidatCom = rs.com;
-                  this.allResultatByCandidatDep = rs.dep;
-                  this.allResultatByCandidatCom.forEach((x)=>{this.totalCom = this.totalCom + parseInt(x.nb)});
-                  this.allResultatByCandidatDep.forEach((x)=>{this.totalDep = this.totalDep + parseInt(x.nb)});
+  //     this.httpService.getResultatByRegionIdAndCandidatId(data.regionId).subscribe((rs:any)=>{
+  //                 this.allResultatByCandidatCom = rs.com;
+  //                 this.allResultatByCandidatDep = rs.dep;
+  //                 this.allResultatByCandidatCom.forEach((x)=>{this.totalCom = this.totalCom + parseInt(x.nb)});
+  //                 this.allResultatByCandidatDep.forEach((x)=>{this.totalDep = this.totalDep + parseInt(x.nb)});
 
                    
-      });
-  }
+  //     });
+  // }
 
 
 

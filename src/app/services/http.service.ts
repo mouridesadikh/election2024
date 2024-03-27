@@ -29,8 +29,8 @@ export class HttpService {
     return this.httpClient.get(this.url+"/resultatsParCandidatsByRegionId/"+id)
   }
 
-  getResultatByRegionIdAndCandidatId(id:number,idcandidat:number){
-    return this.httpClient.get(this.url+"/resultatsParCandidats/"+idcandidat+"/"+id)
+  getResultatByRegionIdAndCandidatId(id:number){
+    return this.httpClient.get(this.url+"/resultatsParCandidats/"+id)
   }
 
   getDataFromDiagram(){
