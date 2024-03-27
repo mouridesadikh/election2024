@@ -21,9 +21,9 @@
     .map__image {
         width: 100%;
         margin-top: 100px;
-        svg {
-            margin-top: -280px;
-        }
+    }
+    .svg {
+        margin-top: -280px;
     }
     .title-region {
         margin-top: 2px;
@@ -38,9 +38,10 @@
     .map__image {
         width: 100%;
         margin-top: 0px;
-        svg {
-            margin-top: -200px;
-        }
+       
+    }
+    .svg {
+        margin-top: -200px;
     }
     .title-region {
         margin-top: 5px;
@@ -52,15 +53,12 @@
     .map__image {
         width: 100%;
         margin-top: -180px;
-        svg {
-            margin-top: -140px;
-        }
-        .title-region {
-            margin-top: 100px;
-        }
+    }
+    .svg {
+        margin-top: -140px;
     }
     .title-region {
-      
+        margin-top: 100px;
         border: 1px solid rgb(35, 10, 177);
     }
 }
@@ -69,13 +67,11 @@
     .map__image {
         width: 100%;
         margin-top: -110px;
-        svg {
-            margin-top: -260px;
-        }
-        .title-region {
-            margin-top: 150px;
-        }
     }
+    .svg{
+        margin-top: -260px;
+    }
+
     .title-region {
         margin-top: 2px;
         border: 1px solid rgb(35, 10, 177);
@@ -104,19 +100,7 @@
     transition: fill 0.3s;
 }
 
-.aliou {
-    fill: #06650c !important;
-    stroke: #FFF;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
 
-.aly {
-    fill: #5d7f4e !important;
-    stroke: #FFF;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
 
 .amadou {
     fill: #7a4d30 !important;
@@ -125,100 +109,3 @@
     transition: fill 0.3s;
 }
 
-.anta {
-    fill: #2a8c3e !important;
-    stroke: #FFF;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
-
-.boubacar {
-    fill: #cd221c !important;
-    stroke: #FFF;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
-
-.cheikh {
-    fill: #1b1a53 !important;
-    stroke: #FFF;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
-
-.daouda {
-    fill: #0a66b2 !important;
-    stroke: #FFF;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
-
-.dethie {
-    fill: #f4b822 !important;
-    stroke: #FFF;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
-
-.malick {
-    fill: #e00314 !important;
-    stroke: #FFF;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
-
-.mamadou {
-    fill: #7030a0 !important;
-    stroke: #FFF;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
-
-.habib {
-    fill: #0083a4 !important;
-    stroke: #FFF;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
-
-.idrissa {
-    fill: #0083a4 !important;
-    stroke: #690007;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
-
-.khalifa {
-    fill: #0083a4 !important;
-    stroke: #06603d;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
-
-.abdallah {
-    fill: #0083a4 !important;
-    stroke: #0c8e36;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
-
-.lamine {
-    fill: #0083a4 !important;
-    stroke: #f9e933;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
-
-.serigne {
-    fill: #0083a4 !important;
-    stroke: #0083a4;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
-
-.alassane {
-    fill: #0083a4 !important;
-    stroke: #37abe2;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-}
