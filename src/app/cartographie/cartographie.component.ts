@@ -40,6 +40,7 @@ export class CartographieComponent {
   nomTotalDevotePArRegion : number = 0;
   nbrVotant: number = 0;
   maClasse: string = 'land';
+  dashboardData:any  = {};
   @ViewChild('idDakar') dakarPathRef!: ElementRef;
   @ViewChild('idDiourbel') diourbelPathRef!: ElementRef;
   @ViewChild('idFatick') fatickPathRef!: ElementRef;
@@ -161,7 +162,16 @@ export class CartographieComponent {
 
   ngOnInit(): void {
     this.getData();
+    this.getDashBoard();
     
+  }
+
+  getDashBoard(){
+     this.httpService.getDashboard().subscribe((rs:any) =>{
+         this.dashboardData = rs;
+         console.log("dashboard",rs);
+         
+     })
   }
 
   getRecup(){

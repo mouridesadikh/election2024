@@ -14,6 +14,152 @@
         <div class="col-12">
             <div class="row">
 
+               
+                <div class="col-md-7 col-12">
+                    <p style="text-align: center;font-weight: bold;" class="title-region"> DIASPORA </p>
+                      <div class="row">
+                        <div class="col-md-4 col-12">
+                            <div class="card" [style.border]="this.getRandomColor()" >
+                                <div class="row">
+                                    <div class="col-2">
+                                        <svg  class="icon-dash" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                                            <line x1="12" y1="8" x2="12" y2="8"></line>
+                                          </svg>
+                                    </div>
+                                    <div class="col-10">
+
+                                        <p style="font-weight: 700;font-size: 14px;text-align: center;">Nombre d'inscrit</p>
+                                        <h4>
+                                            <p  class="card-text text-center">{{ dashboardData.electeursDiaspora }}</p>
+        
+                                        </h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                            &nbsp;&nbsp;
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <div class="card" [style.border]="this.getRandomColor()" >
+                                <div class="row">
+                                    <div class="col-2">
+                                        <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                                            <line x1="12" y1="8" x2="12" y2="8"></line>
+                                          </svg>
+                                    </div>
+                                    <div class="col-10">
+
+                                        <p style="font-weight: 700;font-size: 14px;text-align: center;">Nombre Votants</p>
+                                        <h4>
+                                            <p  class="card-text text-center">{{ dashboardData.nbVotantDiaspora }}</p>
+                                            
+                                        </h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                            &nbsp;&nbsp;
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <div class="card" [style.border]="this.getRandomColor()" >
+                                <div class="row">
+                                    <div class="col-2">
+                                        <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                                            <line x1="12" y1="8" x2="12" y2="8"></line>
+                                          </svg>
+                                    </div>
+                                    <div class="col-10">
+
+                                        <p style="font-weight: 700;font-size: 14px;text-align: center;">% de Particpation</p>
+                                        <h4>
+                                            <p class="card-text text-center">{{((dashboardData.nbVotantDiaspora/dashboardData.electeursDiaspora)*100).toFixed(2)}}%</p>
+                                        </h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                            &nbsp;&nbsp;
+                        </div>
+                      </div>
+                      <p style="text-align: center;font-weight: bold;" class="title-region"> NATIONAL </p>
+                      <div class="row">
+                        <div class="col-md-4 col-12">
+                            <div class="card" [style.border]="this.getRandomColor()" >
+                                <div class="row">
+                                    <div class="col-2">
+                                        <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                                            <line x1="12" y1="8" x2="12" y2="8"></line>
+                                          </svg>
+                                    </div>
+                                    <div class="col-10">
+
+                                        <p style="font-weight: 700;font-size: 14px;text-align: center;">Nombre d'inscrit</p>
+                                        <h4>
+                                            <p  class="card-text text-center">{{ dashboardData.electeursNational
+                                            }}</p>
+        
+                                        </h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                            &nbsp;&nbsp;
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <div class="card" [style.border]="this.getRandomColor()" >
+                                <div class="row">
+                                    <div class="col-2">
+                                        <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                                            <line x1="12" y1="8" x2="12" y2="8"></line>
+                                          </svg>
+                                    </div>
+                                    <div class="col-10">
+
+                                        <p style="font-weight: 700;font-size: 14px;text-align: center;">Nombre Votants</p>
+                                        <h4>
+                                            <p  class="card-text text-center">{{ dashboardData.nbVotantNational}}</p>
+                                            
+                                        </h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                            &nbsp;&nbsp;
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <div class="card" [style.border]="this.getRandomColor()" >
+                                <div class="row">
+                                    <div class="col-2">
+                                        <svg class="icon-dash" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                                            <line x1="12" y1="8" x2="12" y2="8"></line>
+                                          </svg>
+                                    </div>
+                                    <div class="col-10">
+
+                                        <p style="font-weight: 700;font-size: 14px;text-align: center;">% de Particpation</p>
+                                        <h4>
+                                            <p class="card-text text-center">{{((dashboardData.nbVotantNational/dashboardData.electeursNational)*100).toFixed(2)}}%</p>
+                                        </h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                            &nbsp;&nbsp;
+                        </div>
+                      </div>
+                </div>
                 <div class="col-md-5 col-12">
                     <p style="text-align: center;font-weight: bold;" class="title-region"> {{ nomRegion }} </p>
                     <div class="map__image">
@@ -104,12 +250,6 @@
 
 
                 </div>
-                <div class="col-md-7 col-12">
-
-                    <div class="graph">
-                        <canvasjs-chart [options]="chartOption" [styles]="{width: '100%', height:'460px'}"></canvasjs-chart>
-                    </div>
-                </div>
 
                 <div class="col-md-12 col-12 card-candidat" *ngIf="nomRegion != '' " >
 
@@ -154,4 +294,10 @@
         </div>
     </div>
 
+</div>
+
+
+
+<div class="graph">
+    <canvasjs-chart [options]="chartOption" [styles]="{width: '100%', height:'460px'}"></canvasjs-chart>
 </div>

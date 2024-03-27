@@ -99,7 +99,8 @@ export class CandidatComponent {
     
     
     this.allDataByRgion =  groupedData;
-  }
+    this.isLoading = 0;
+    }
 
 
   getTotalRegion(data:any){

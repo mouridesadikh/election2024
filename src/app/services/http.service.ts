@@ -50,4 +50,9 @@ export class HttpService {
     
     return this.httpClient.get(this.url+"/rts/region/candidat/"+id)
   }
+
+
+  getDashboard(){
+    return this.httpClient.get(this.url+"/data/home")
+  }
 }
