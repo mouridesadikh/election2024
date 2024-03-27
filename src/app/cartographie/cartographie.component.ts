@@ -467,7 +467,7 @@ export class CartographieComponent {
                 text: ""   
               },
               axisX:{
-                title: "Région"
+                title: "Régions"
               },
               axisY:{
                 title: "Pourcentage"

@@ -45,4 +45,9 @@ export class HttpService {
   
   
   }
+
+  getDataRegionCandidat(id:number){
+    
+    return this.httpClient.get(this.url+"/rts/region/candidat/"+id)
+  }
 }

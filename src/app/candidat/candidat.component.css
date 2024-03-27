@@ -1,13 +1,8 @@
-.selectpicker {
-    width: 200px;
-}
-
-.custom-option {
-    padding-left: 30px;
-}
-
-.custom-option img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+@media only screen and (max-width: 600px) {
+    .img-candidat {
+        width: 50PX !important;
+    }
+    .nom-candidat {
+        margin-top: -50px;
+    }
 }

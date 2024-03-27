@@ -16,7 +16,7 @@ import { CandidatComponent } from './candidat/candidat.component';
     AppComponent,
     DiaspraComponent,
     EvolutionComponent,
-    CandidatComponent
+  
   ],
   imports: [
     BrowserModule,

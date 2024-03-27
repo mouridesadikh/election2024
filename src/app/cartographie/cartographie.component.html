@@ -1,8 +1,8 @@
-<div class="m-5">
+<div class="m-4">
 
     <div class="row">
         <div class="col-12">
-            <br><br>
+
             <div *ngIf="allRegionWithResult.length == 0">
 
                 <div class="spinner spinner-border text-info" role="status" style="margin-left:auto;margin-top: 10px;">
@@ -15,10 +15,10 @@
             <div class="row">
 
                 <div class="col-md-5 col-12">
-
+                    <p style="text-align: center;font-weight: bold;" class="title-region"> {{ nomRegion }} </p>
                     <div class="map__image">
                         <br>
-                        <p style="text-align: center;font-weight: bold;" class="title-region"> {{ nomRegion }} </p>
+
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 620 985">
                                  
                                 <g >
@@ -106,14 +106,14 @@
                 </div>
                 <div class="col-md-7 col-12">
 
-                    <div>
+                    <div class="graph">
                         <canvasjs-chart [options]="chartOption" [styles]="{width: '100%', height:'460px'}"></canvasjs-chart>
                     </div>
                 </div>
 
                 <div class="col-md-12 col-12" *ngIf="nomRegion != '' ">
 
-                    <div class="card">
+                    <div class="card" style="margin-top: 15px;">
                         <div class="card-header" style="font-weight: 900;">
                             <p style="text-align: center;font-weight: bold;"> {{ nomRegion }} </p>
                         </div>

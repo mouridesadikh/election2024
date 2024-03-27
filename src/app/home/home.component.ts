@@ -49,7 +49,7 @@ export class HomeComponent {
                 text: ""   
               },
               axisX:{
-                title: "Région"
+                title: "Régions"
               },
               axisY:{
                 title: "Pourcentage"
