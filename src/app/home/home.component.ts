@@ -19,6 +19,7 @@ export class HomeComponent {
 
   
   chartOptions : any;
+  dashboardData : any = {};
  
   constructor(private httpService : HttpService){
       this.getData();
@@ -34,6 +35,7 @@ export class HomeComponent {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
      this.getData();
+     this.getDashBoard();
   }
 
   getData()
@@ -148,6 +150,20 @@ export class HomeComponent {
       //    });
     
   }
-  
+  getDashBoard(){
+    this.httpService.getDashboard().subscribe((rs:any) =>{
+        this.dashboardData = rs;
+        console.log(this.dashboardData);
+        
+        
+        
+    })
+ }
+
+
+ sommeDeuxInt(nb1 : any , nb2 :any){
+       return parseInt(nb1) + parseInt(nb2);
+ }
+
 
 }

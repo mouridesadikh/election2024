@@ -9,12 +9,13 @@ import { HttpService } from '../services/http.service';
 export class DiaspraComponent {
   allResultatsByCandidats : any [] = [];
   nbrVotant : number = 0;
+  dashboardData:any = {};
   constructor(private httpService : HttpService){
     this.getRecup();
-   
+    this.getDashBoard();
     setInterval(()=>{
       this.getRecup();
-  },20000);
+  },200000);
    
   }
   getRandomColor() {
@@ -32,5 +33,14 @@ export class DiaspraComponent {
 });
 
   }
+
+  getDashBoard(){
+    this.httpService.getDashboard().subscribe((rs:any) =>{
+        this.dashboardData = rs;
+      
+        
+        
+    })
+ }
 
 }
