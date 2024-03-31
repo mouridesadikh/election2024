@@ -3,7 +3,8 @@ import { HttpService } from '../services/http.service';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
-import { map } from 'rxjs';
+import { map,forkJoin } from 'rxjs';
+import { error } from 'jquery';
 
 @Component({
   selector: 'app-home',
@@ -109,18 +110,42 @@ export class HomeComponent {
 
 
   getRecup(){
-   
-      this.httpService.getResultat().subscribe((rs:any)=>{
-        
+
+      forkJoin([this.httpService.getResultat(),this.httpService.getResultatDiaspoora()]).subscribe(
+        (resultat : any []) =>{
+
          
-        this.allResultatsByCandidats = rs.rtsParCandidats;
+            let recupResultat : any [] = [];
+            this.nbrVotant = parseInt(resultat[0].nbrVotant)+ parseInt(resultat[1].nbrVotant);
+          
+            
+            resultat[0].rtsParCandidats.forEach((el1:any) => {
+                let recup = resultat[1].rtsParCandidats.find((x:any)=>x.nom == el1.nom);
+                
+                 
+                 el1.nb  =  parseInt(el1.nb) + parseInt(recup.nb);
+                 
+                 recupResultat.push(el1);
+                
+
+            });
+         
+            this.allResultatsByCandidats = recupResultat.sort((a,b) => b.nb - a.nb);
+        },(error)=>{
+        }
+      )
+   
+      // this.httpService.getResultat().subscribe((rs:any)=>{
+      //   this.httpService.getResultatDiaspoora().subscribe((rs:any)=>{
+         
+      //   this.allResultatsByCandidats = rs.rtsParCandidats;
 
         
-        this.allResultatsByCandidats = this.allResultatsByCandidats.sort((a,b) => b.nb - a.nb);
+      //   this.allResultatsByCandidats = this.allResultatsByCandidats.sort((a,b) => b.nb - a.nb);
        
-        this.nbrVotant = rs.nbrVotant;    
+      //   this.nbrVotant = rs.nbrVotant;    
 
-         });
+      //    });
     
   }
   
