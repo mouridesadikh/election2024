@@ -38,9 +38,11 @@ export class DiaspraComponent {
     this.httpService.getDashboard().subscribe((rs:any) =>{
         this.dashboardData = rs;
       
-        
-        
     })
+ }
+
+ pourcentage(nb1:any,nb2:any){
+   return ((nb1 / nb2) * 100).toFixed(2);
  }
 
 }
