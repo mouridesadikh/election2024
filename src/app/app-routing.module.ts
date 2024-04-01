@@ -8,7 +8,7 @@ import { CandidatComponent } from './candidat/candidat.component';
 
 const routes: Routes = [
     {path : '', redirectTo: '/home', pathMatch:'full'},
-    {path : 'cartographie', component: HomeComponent},
+    {path : 'globaux', component: HomeComponent},
     {path : 'home', component : CartographieComponent},
     {path : 'diaspora', component : DiaspraComponent},
     {path : 'evolution', component : EvolutionComponent},

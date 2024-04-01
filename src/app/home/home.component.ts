@@ -167,7 +167,7 @@ export class HomeComponent {
 
 
  pourcentage(nb1:any,nb2:any){
-  return ((nb1 / nb2) * 100).toFixed(2);
+  return (((nb1 + 34125) / nb2) * 100).toFixed(2);
 }
 
 }
